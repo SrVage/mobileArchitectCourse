@@ -22,8 +22,8 @@ namespace Code.Hero
         private void Start()
         {
             _camera = UnityEngine.Camera.main;
-            _camera.GetComponent<CameraFollowing>().SetFollowing(transform);
         }
+        
 
         private void Update()
         {

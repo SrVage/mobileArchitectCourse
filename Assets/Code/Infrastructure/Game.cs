@@ -1,3 +1,4 @@
+using Code.Services;
 using Code.Services.Input;
 using UnityEngine;
 
@@ -6,13 +7,11 @@ namespace Code.Infrastructure
     public class Game
     {
         public static IInputService InputService;
+        public readonly GameStateMachine StateMachine;
 
-        public Game()
+        public Game(ICoroutineRunner coroutineRunner, Loading loading)
         {
-            if (Application.isEditor)
-                InputService = new InputServiceStandalone();
-            else
-                InputService = new InputServiceMobile();
+            StateMachine = new GameStateMachine(new LoadScene(coroutineRunner), loading);
         }
     }
 }
