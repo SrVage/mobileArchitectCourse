@@ -447,4 +447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d0a3a307c345b39bbfcb947185abcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvas: {fileID: 7439878190843078868}
   _speed: 0.01
+--- !u!225 &7439878190843078868 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 2711521993721474329, guid: 8fed67caeb5eecc4090dc3d5dee0d51e, type: 3}
+  m_PrefabInstance: {fileID: 7439878190843078865}
+  m_PrefabAsset: {fileID: 0}
