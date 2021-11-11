@@ -15,7 +15,7 @@ namespace Code.Hero
 
         private void Awake()
         {
-            _inputService = Game.InputService;
+            _inputService = AllServices.Container.Single<IInputService>();
             _characterController = GetComponent<CharacterController>();
         }
 
