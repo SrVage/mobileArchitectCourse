@@ -7,10 +7,10 @@ namespace Code.Infrastructure
     public class GameBootstrapper:MonoBehaviour, ICoroutineRunner
     {
         private Game _game;
-        [SerializeField] private Loading _loading;
+        [SerializeField] private Loading _loadingPrefab;
         private void Awake()
         {
-            _game = new Game(this, _loading);
+            _game = new Game(this, Instantiate(_loadingPrefab));
             _game.StateMachine.Enter<BootstrapState>();
             DontDestroyOnLoad(this); 
         }
